@@ -9,17 +9,11 @@ class Transcriptor {
     }
 
     toRna(str) {
-        let rnaStr = '';
-        if(str.length > 1) {
-            str.split('');
-            for(let i = 0; i < str.length; i++) {
-                if(str[i] in this.dnaRna !== true)
-                    return new Error('Invalid input DNA.');
-                rnaStr += this.dnaRna[str[i]];
-            }
-            return rnaStr;
-        }
-        return this.dnaRna[str];
+        return str.split('').map((currentItem) => {
+            if(this.dnaRna[currentItem] === undefined)
+                throw new Error('Invalid input DNA.');
+            return this.dnaRna[currentItem];
+        }).join('');
     }
 }
 export default Transcriptor;
