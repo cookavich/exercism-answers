@@ -44,7 +44,7 @@ describe('Bob', () => {
     expect(result).toEqual('Whatever.');
   });
 
-  xit('question with only numbers', () => {
+  it('question with only numbers', () => {
     const result = bob.hey('4?');
     expect(result).toEqual('Sure.');
   });
