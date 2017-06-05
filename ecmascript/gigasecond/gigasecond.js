@@ -1,12 +1,12 @@
 class Gigasecond {
     constructor(initialDate) {
-        this.initialDate = initialDate;
-        this.timeDifference = 1000000000
+        this.initialDate = new Date(initialDate);
+        this.initialDate.setUTCSeconds(this.initialDate.getUTCSeconds() + 1000000000);
+        this.gs = this.initialDate;
     }
 
     date() {
-        let gigaSecond = new Date(0);
-        return gigaSecond.setUTCSeconds(this.initialDate.setSeconds(this.initialDate.getSeconds() + this.gigaSecond));
+        return this.gs;
     }
 }
 
