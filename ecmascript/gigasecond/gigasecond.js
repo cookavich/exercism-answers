@@ -1,7 +1,9 @@
+const timeDifference = 1000000000;
+
 class Gigasecond {
     constructor(initialDate) {
         this.initialDate = new Date(initialDate);
-        this.initialDate.setUTCSeconds(this.initialDate.getUTCSeconds() + 1000000000);
+        this.initialDate.setUTCSeconds(this.initialDate.getUTCSeconds() + timeDifference);
         this.gs = this.initialDate;
     }
 
