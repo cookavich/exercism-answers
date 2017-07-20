@@ -12,7 +12,7 @@ class PerfectNumbers {
 
     getAliquotSum(int) {
         let aliquotSum = 0;
-        for (let i = 0; i < int; i++)
+        for (let i = 0; i <= int / 2; i++)
             if (i !== int && int % i === 0)
                 aliquotSum += i;
         return aliquotSum;
