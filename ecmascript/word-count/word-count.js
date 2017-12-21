@@ -5,7 +5,7 @@ class Words {
       .replace(/[\t\n]+/g, ' ')
       .split(/\s+/)
       .reduce((tally, word) => {
-        tally[word] = (+tally[word] || 0) + 1
+        tally[word] = (+tally[word] || 0) + 1;
         return tally;
       }, Object.create(null));
   }
